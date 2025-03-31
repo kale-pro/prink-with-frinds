@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <!-- Content for the first page -->
+        <div id="page1">
+            <h1>Fuck You!!</h1>
+            <button onclick="goToPage('page2')">Too</button>
+        </div>
+        <!-- Content for the second page -->
+        <div id="page2" style="display:none;">
+            <h1> Fuck You Too!!</h1>
+            <button onclick="goToPage('page3')">Next</button>
+        </div>
+        <!-- Content for the third page -->
+        <div id="page3" style="display:none;">
+            <h1>Haha, it's a prank bro!<br><br> khelega free fire 
+            <br><br>1V1</h1>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            // Hide all pages
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page3').style.display = 'none';
+            
+            // Show the selected page
+            document.getElementById(page).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
